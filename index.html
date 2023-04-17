@@ -25,6 +25,7 @@
           <a class="link logo" href="./index.html"
             >Web<span class="logo-st">Studio</span></a
           >
+
           <ul class="nav-list list">
             <li class="nav-item">
               <a class="nav-link curent link" href="./index.html">Studio</a>
@@ -37,6 +38,16 @@
             </li>
           </ul>
         </nav>
+        <button
+          type="button"
+          class="burger-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="icon-burger" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="auto-nav list">
             <li>
@@ -51,6 +62,76 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="mobile-menu-conteiner conteiner">
+          <button type="button" class="modal-close-btn js-close-menu">
+            <svg class="modal-close-btn-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mobnav-list list">
+              <li class="mobnav-item">
+                <a class="mobnav-link curent link" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobnav-item">
+                <a class="mobnav-link link" href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mobnav-item">
+                <a class="mobnav-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobaddress">
+            <ul class="mobnav list">
+              <li class="mobnav-item">
+                <a class="mobcontact-link link phone" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobnav-item">
+                <a class="mobcontact-link link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="social-list list mob-sociale-list">
+            <li class="social-list-item">
+              <a href="" class="social-list-link">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="" class="social-list-link">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="" class="social-list-link">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="" class="social-list-link">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -126,6 +207,7 @@
           <ul class="list-simple list">
             <li class="item-simpl">
               <img
+                srcset="./images/monitor@x1.jpg 1x, ./images/monitor@x2.jpg 2x"
                 src="./images/monitor.jpg"
                 alt="monitor"
                 width="360"
@@ -134,6 +216,10 @@
             </li>
             <li class="item-simpl">
               <img
+                srcset="
+                  ./images/smartphone@x1.jpg 1x,
+                  ./images/smartphone@x2.jpg 2x
+                "
                 src="./images/smartphone.jpg"
                 alt="smartphone"
                 width="360"
@@ -142,6 +228,7 @@
             </li>
             <li class="item-simpl">
               <img
+                srcset="./images/mscolor@x1.jpg 1x, ./images/mscolor@x2.jpg 2x"
                 src="./images/mscolor.jpg"
                 alt="mscolor"
                 width="360"
@@ -158,6 +245,10 @@
           <ul class="list-team list">
             <li class="item-team">
               <img
+                srcset="
+                  ./images/markguerrero@x1.jpg 1x,
+                  ./images/markguerrero@x2.jpg 2x
+                "
                 src="./images/imgmarkguerrero.jpg"
                 alt="Mark-Guerrero"
                 width="264"
@@ -200,6 +291,7 @@
             </li>
             <li class="item-team">
               <img
+                srcset="./images/tomford@x1.jpg 1x, ./images/tomford@x2.jpg 2x"
                 src="./images/imgtomford.jpg"
                 alt="Tom-Ford"
                 width="264"
@@ -242,6 +334,10 @@
             </li>
             <li class="item-team">
               <img
+                srcset="
+                  ./images/camilagarcia@x1.jpg 1x,
+                  ./images/camilagarcia@x2.jpg 2x
+                "
                 src="./images/imgcamilagarcia.jpg"
                 alt="Camila-Garcia"
                 width="264"
@@ -284,6 +380,10 @@
             </li>
             <li class="item-team">
               <img
+                srcset="
+                  ./images/danielwilson@x1.jpg 1x,
+                  ./images/danielwilson@x2.jpg 2x
+                "
                 src="./images/imgdanielwilson.jpg"
                 alt="Daniel-Wilson"
                 width="264"
@@ -522,11 +622,13 @@
               id="user-policy"
             />
             <label for="user-policy" class="contact-form-accept-title">
-              I accept the terms and conditions of the&nbsp
-              <a href="" class="contact-form-accept-link">
-                Privacy Policy</a
-              ></label
-            >
+              <span>
+                I accept the terms and conditions of the&nbsp
+                <a href="" class="contact-form-accept-link">
+                  Privacy Policy</a
+                ></span
+              >
+            </label>
           </div>
           <button type="submit" class="form-btn-send">Send</button>
         </form>
@@ -534,5 +636,12 @@
     </div>
     <!-- script js -->
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
